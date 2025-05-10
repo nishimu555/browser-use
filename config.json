@@ -1,0 +1,6 @@
+{
+  "browser": "chrome",
+  "headless": true,
+  "timeout": 30,
+  "start_url": "https://example.com"
+}
