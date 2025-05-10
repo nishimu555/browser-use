@@ -1,3 +1,5 @@
+# docker build -t browser-use-app .
+
 # ベースイメージとしてNode.jsを使用
 FROM node:18
 
@@ -18,7 +20,8 @@ RUN npm install
 
 # Python用の依存関係をインストール
 COPY requirements.txt ./
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt
+RUN pip3 install --break-system-packages -r requirements.txt
 
 # アプリケーションコードをコピー
 COPY . .
